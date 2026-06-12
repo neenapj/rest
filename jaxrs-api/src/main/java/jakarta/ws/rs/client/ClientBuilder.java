@@ -272,4 +272,16 @@ public abstract class ClientBuilder implements Configurable<ClientBuilder> {
      * @return a new client instance.
      */
     public abstract Client build();
+
+    /**
+     * Register a {@link ClientListener} to receive client lifecycle events.
+     * <p>
+     * The listener will be notified of events such as connection closure
+     * </p>
+     *
+     * @param listener the client listener to register
+     * @return an updated client builder instance
+     * @since 5.0
+     */
+    public abstract ClientBuilder listener(ClientListener listener);
 }
